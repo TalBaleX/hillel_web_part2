@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
+
+* {
+  margin: 0;
+  font-family: "lato";
+}
+header {
+  background: #f9f7e8;
+}
+nav {
+  max-width: 77%;
+  height: 88px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+nav span {
+  font-size: 30px;
+  font-family: "Courgette", sans-serif;
+}
+.greenLogo {
+  color: #62bfad;
+}
+ul {
+  display: inline-block;
+}
+li {
+  display: inline-block;
+  list-style: none;
+}
+li:first-child {
+  margin-left: 50px;
+}
+li + li {
+  margin-left: 10px;
+}
+.headerImage {
+  background-color: #d52047;
+  height: 486px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 30px;
+  color: white;
+}
+.headerImage div {
+  font-family: "Limelight";
+}
+.about-container {
+  background: #eff8f6;
+}
+.about-container a {
+  color: #d52047;
+}
+.about-internal {
+  max-width: 77%;
+  margin: auto;
+  padding: 30px;
+}
+.about-image-container {
+  height: 348px;
+  background-color: #e5e5e5;
+}
+.container {
+  max-width: 77%;
+  margin: auto;
+}
+p {
+  color: #d52047;
+  font-size: 1.5em;
+}
+.container a {
+  color: #d52047;
+}
+.about-text,
+.about-image {
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+.about-inner-text {
+  width: 90%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+}
+.about-image {
+  background-image: url("../images/about-image.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.cards {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.card {
+  width: 200px;
+  border: 2px gainsboro solid;
+  border-radius: 15px;
+  font-size: 14px;
+  padding: 20px 10px;
+}
+.inner-card {
+  width: 90%;
+  margin: auto;
+}
+.card-image {
+  background-image: url("../images/card-image.png");
+  height: 156px;
+}
+#sec {
+  background-image: url("../images/card-image-mountains.png");
+}
+
+#th {
+  background-image: url("../images/card-image-house.png");
+}
+footer {
+  height: 176px;
+  background: #f9f7e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+footer a {
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px solid black;
+  padding-bottom: 2px;
+}
+.socials {
+  display: flex;
+  width: 10%;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.logo {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+.twitter {
+  background-image: url("../images/logos/twitter_svg.svg");
+}
+.linkendin {
+  background-image: url("../images/logos/linked-in_svg.svg");
+}
+.instagram {
+  background-image: url("../images/logos/instagram_svg.svg");
+}
+
+.twitter:hover {
+  background-image: url("../images/logos/twitter_svg_hovered.svg");
+}
+.linkendin:hover {
+  background-image: url("../images/logos/linked-in_svg_hovered.svg");
+}
+.instagram:hover {
+  background-image: url("../images/logos/instagram_svg_hovered.svg");
+}
