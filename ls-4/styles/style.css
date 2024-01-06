@@ -78,18 +78,14 @@ p {
 .cards {
   display: flex;
   justify-content: space-between;
-  gap: 50px;
+  gap: 72px;
 }
 .card {
-  width: 22%;
-  border: 2px gainsboro solid;
+  width: 22vw;
+  border: 1.6px gainsboro solid;
   border-radius: 15px;
-  font-size: 14px;
-  padding: 20px 10px;
-}
-.inner-card {
-  width: 90%;
-  margin: auto;
+  font-size: 16px;
+  padding: 24px;
 }
 .card-image {
   background-image: url("../images/card-image.png");
@@ -115,6 +111,7 @@ footer {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  font-family: "Lato";
 }
 footer a {
   color: black;
