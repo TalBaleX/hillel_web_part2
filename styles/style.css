@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Urbanist", sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 10vh;
+  background: rgb(15, 16, 32);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  font-size: 2em;
+}
+
+header div + div {
+  margin: 10px;
+}
+header a {
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+section {
+  display: flex;
+  width: 100%;
+  min-height: 80vh;
+}
+
+.part-of.section {
+  flex: 2;
+}
+
+main {
+  flex: 6;
+  padding: 20px;
+  border-bottom: 2px rgb(185, 185, 185) solid;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+nav {
+  border-right: 2px rgb(185, 185, 185) solid;
+  background-color: rgb(221, 221, 221);
+}
+nav ul {
+  display: flex;
+  padding-left: 0;
+  height: 50%;
+  flex-direction: column;
+}
+nav li {
+  display: flex;
+  list-style-type: none;
+  width: 100%;
+  height: 25%;
+  justify-content: center;
+  align-items: center;
+}
+nav span {
+  color: black;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: black;
+}
+nav a {
+  list-style: square;
+  text-decoration: none;
+  color: rgb(85, 85, 85);
+  text-align: center;
+}
+
+aside {
+  /* background-color: rgba(15, 16, 32, 0.2); */
+  padding: 15px;
+  font-weight: 600;
+  border-left: 2px rgb(185, 185, 185) solid;
+  border-bottom: 2px rgb(185, 185, 185) solid;
+}
+
+aside span:first-child {
+  background-color: yellow;
+}
+
+footer {
+  height: 10vh;
+  background-color: rgb(221, 221, 221);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: sans-serif;
+}
+
+@media screen and (max-width: 600px) {
+  section {
+    flex-direction: column;
+  }
+  nav {
+    display: flex;
+    min-height: 40vh;
+    align-items: center;
+    justify-content: center;
+    order: 3;
+    background-color: white;
+    font-size: 1.5em;
+  }
+
+  main {
+    border: none;
+  }
+
+  aside {
+    order: 2;
+    border: none;
+    padding: 100px;
+  }
+  .part-of-section {
+    flex: 5;
+  }
+}
