@@ -64,7 +64,8 @@ nav span + span {
   margin-left: 42px;
 }
 
-.text-container, .start.text-container {
+.text-container,
+.start.text-container {
   display: block;
   max-width: 540px;
   text-align: center;
@@ -112,4 +113,4 @@ button {
 
 footer {
   padding: 50px;
-}/*# sourceMappingURL=index.css.map */
+} /*# sourceMappingURL=index.css.map */
