@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+.text-black {
+  color: rgb(0, 0, 0);
+}
+
+.text-white {
+  color: rgb(255, 255, 255);
+}
+
+.text-blue {
+  color: rgb(52, 84, 122);
+}
+
+.text-darkgray {
+  color: rgb(114, 114, 114);
+}
+
+.text-silver {
+  color: rgb(238, 239, 241);
+}
+
+.bg-black {
+  background: rgb(0, 0, 0);
+}
+
+.bg-white {
+  background: rgb(255, 255, 255);
+}
+
+.bg-blue {
+  background: rgb(52, 84, 122);
+}
+
+.bg-darkgray {
+  background: rgb(114, 114, 114);
+}
+
+.bg-silver {
+  background: rgb(238, 239, 241);
+}
+
+* {
+  margin: 0;
+  font-family: "Roboto";
+}
+
+.container {
+  min-width: 1110px;
+  max-width: 1110px;
+  margin: auto;
+}
+
+.big-container {
+  width: 100vw;
+  min-height: 700px;
+  background: rgb(238, 239, 241);
+}
+
+nav {
+  padding: 79px 0px 79px 0px;
+}
+nav span + span {
+  display: inline-block;
+  margin-left: 42px;
+}
+
+.text-container, .start.text-container {
+  display: block;
+  max-width: 540px;
+  text-align: center;
+  margin: auto;
+  margin-top: 100px;
+  line-height: 26.25px;
+}
+
+.start.text-container {
+  text-align: start;
+  margin: 0;
+}
+
+button {
+  width: 225px;
+  height: 65px;
+  border: none;
+  padding: 19 41 20 41px;
+  letter-spacing: 2px;
+  font-weight: light;
+}
+
+.projects-box {
+  height: 250px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.project-items {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.project-item {
+  display: flex;
+  width: 141px;
+  justify-content: space-between;
+}
+
+.mt-default {
+  margin-top: 100px;
+}
+
+footer {
+  padding: 50px;
+}/*# sourceMappingURL=index.css.map */

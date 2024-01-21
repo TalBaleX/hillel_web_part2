@@ -1,0 +1,18 @@
+$colors: (
+  "black": rgba(0, 0, 0, 1),
+  "white": rgba(255, 255, 255, 1),
+  "blue": rgba(52, 84, 122, 1),
+  "darkgray": rgba(114, 114, 114, 1),
+  "silver": rgba(238, 239, 241, 1),
+);
+
+@each $color-name, $color-code in $colors {
+  .text-#{$color-name} {
+    color: $color-code;
+  }
+}
+@each $color-name, $color-code in $colors {
+  .bg-#{$color-name} {
+    background: $color-code;
+  }
+}

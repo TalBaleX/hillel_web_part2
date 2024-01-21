@@ -1,0 +1,11 @@
+@mixin big-container {
+  width: 100vw;
+  min-height: 700px;
+  background: map-get($colors, "silver");
+}
+
+@mixin container {
+  min-width: 1110px;
+  max-width: 1110px;
+  margin: auto;
+}
