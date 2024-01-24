@@ -39,29 +39,69 @@ nav {
   letter-spacing: 2px;
   font-weight: light;
 }
-
 .projects-box {
   height: 250px;
   display: flex;
   justify-content: space-between;
   color: white;
+  align-items: center;
+  @include md {
+    display: grid;
+    justify-content: center;
+  }
 }
 
 .project-items {
   display: flex;
-  width: 100%;
-  justify-content: space-between;
+  width: 70%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  gap: 5%;
+  @include md {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-self: center;
+    align-self: center;
+    width: 100%;
+    gap: 10px;
+    padding: 100 0 100 0px;
+  }
 }
 
 .project-item {
   display: flex;
   width: 141px;
   justify-content: space-between;
+  align-items: center;
+  gap: 5%;
+  @include md {
+    text-align: center;
+  }
 }
 
 .mt-default {
   margin-top: 100px;
 }
+.video {
+  padding: 50px;
+  @include lg {
+    padding: 0;
+  }
+}
+.lg-important {
+  @include lg {
+    width: 80%;
+    display: flex;
+    margin: auto;
+
+    div {
+      width: 50%;
+    }
+  }
+}
+
 footer {
   padding: 50px;
 }
