@@ -4,17 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="./styles/index.css" />
   </head>
   <body>
     <div class="big-container">
       <div class="container">
-        <nav>
-          <span class="text-blue">HOMEPAGE</span>
-          <span>ABOUT AUTHOR</span>
-          <span>WORKS</span>
-          <span>PROCESS</span>
-          <span>CONTACTS</span>
+        <nav class="navbar navbar-expand-md">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapse-elements"
+          >
+            <span><i class="fs-2 bi bi-list"></i></span>
+          </button>
+          <div
+            class="col-12 collapse navbar-collapse mt-4 align-items-center"
+            id="collapse-elements"
+          >
+            <span class="text-blue">HOMEPAGE</span>
+            <span class="ms-2">ABOUT AUTHOR</span>
+            <span class="ms-2">WORKS</span>
+            <span class="ms-2">PROCESS</span>
+            <span class="ms-2">CONTACTS</span>
+          </div>
         </nav>
         <div style="margin-top: 150px">
           <h1 style="font-size: 48px">Design and layout</h1>
@@ -26,9 +47,13 @@
             Ipsum has been the standard "fish" for Latin texts since the early
             16th century.
           </p>
-          <button class="text-white bg-blue" style="margin-top: 65px">
+          <button class="write-me text-white bg-blue" style="margin-top: 65px">
             WRITE ME
           </button>
+          <br />
+          <br />
+          <br />
+          <br />
         </div>
       </div>
     </div>
@@ -126,5 +151,7 @@
         <div>(c) 2018. All rights reserved.</div>
       </div>
     </footer>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   </body>
 </html>
