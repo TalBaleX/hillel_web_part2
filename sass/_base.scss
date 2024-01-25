@@ -39,6 +39,7 @@ nav {
   letter-spacing: 2px;
   font-weight: light;
 }
+
 .projects-box {
   height: 250px;
   display: flex;
@@ -48,6 +49,9 @@ nav {
   @include md {
     display: grid;
     justify-content: center;
+  }
+  @include sm {
+    height: 350px;
   }
 }
 
@@ -67,6 +71,14 @@ nav {
     width: 100%;
     gap: 10px;
     padding: 100 0 100 0px;
+  }
+  @include sm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-self: center;
+    align-self: center;
+    width: 100%;
+    gap: 10px;
   }
 }
 
@@ -99,6 +111,24 @@ nav {
     div {
       width: 50%;
     }
+  }
+}
+
+.lg-text {
+  align-self: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  text-align: center;
+  line-height: 26.25px;
+  max-width: 540px;
+  margin: 100px auto 0px auto;
+
+  @include lg {
+    max-width: none;
+    width: 50%;
+    padding: 0 100px;
   }
 }
 
