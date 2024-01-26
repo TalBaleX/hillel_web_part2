@@ -57,11 +57,11 @@ nav {
 
 .project-items {
   display: flex;
-  width: 70%;
+  width: 100%;
   justify-content: center;
   align-items: center;
   margin: auto;
-  gap: 5%;
+  gap: 2%;
   @include md {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -97,7 +97,7 @@ nav {
   margin-top: 100px;
 }
 .video {
-  padding: 50px;
+  padding: 0px 50px;
   @include lg {
     padding: 0;
   }
