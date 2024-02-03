@@ -30,7 +30,7 @@ const vasya = new Cat(
   "Вася",
   "Чоловіча",
   "сірий",
-  "Так",
+  "Ні",
   "./images/18289.jpg"
 );
 const funtik = new Cat(
