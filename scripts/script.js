@@ -1,3 +1,5 @@
+var CURRENTcat = undefined;
+
 class Cat {
   constructor(poroda, age, name, gender, color, sleepingStatus, image) {
     this.poroda = poroda;
@@ -30,7 +32,7 @@ const vasya = new Cat(
   "Вася",
   "Чоловіча",
   "сірий",
-  "Ні",
+  false,
   "./images/18289.jpg"
 );
 const funtik = new Cat(
@@ -39,7 +41,7 @@ const funtik = new Cat(
   "Фунтік",
   "Чоловіча",
   "Світло-корічневий",
-  "Ні",
+  false,
   "./images/82675767-vertical-photo-of-single-small-kitten-cat-sits-on-tile-in-herbs-garden-with-thyme-in-front-and-chive.jpg"
 );
 const angela = new Cat(
@@ -48,7 +50,7 @@ const angela = new Cat(
   "Анжела",
   "Жіноча",
   "Світло-сіра",
-  "Ні",
+  false,
   "./images/d2f90a589fe69005364c26b00692cf7d.jpg"
 );
 
@@ -62,8 +64,12 @@ let gender = document.querySelector(".gender");
 let color = document.querySelector(".color");
 let sleepStatus = document.querySelector(".SleepingStatus");
 
-function showCat(number) {
-  number = number - 1;
+let buttons = document.querySelectorAll("button");
+buttons = Array.from(buttons);
+function showCat(event) {
+  let number = event.target.id;
+  CURRENTcat = number;
+  number--;
 
   catImg.src = catsArray[number].image;
   catImg.alt = catsArray[number].image;
@@ -74,7 +80,16 @@ function showCat(number) {
   gender.textContent = "Стать:" + " " + catsArray[number].gender;
   color.textContent = "Кольор:" + " " + catsArray[number].color;
   sleepStatus.textContent =
-    "Статус(спить або не спить):" + " " + catsArray[number].sleepingStatus;
+    catsArray[number].sleepingStatus == true
+      ? "Статус(спить або не спить):" + " " + "Так"
+      : "Статус(спить або не спить):" + " " + "Ні";
+  for (i = 0; i < buttons.length; i++) {
+    if (i == number) {
+      buttons[i].style.background = "red";
+    } else {
+      buttons[i].style.background = "gray";
+    }
+  }
 }
 
 catImg.src = catsArray[0].image;
@@ -86,4 +101,7 @@ nickname.textContent = "Кличка:" + " " + catsArray[0].name;
 gender.textContent = "Стать:" + " " + catsArray[0].gender;
 color.textContent = "Кольор:" + " " + catsArray[0].color;
 sleepStatus.textContent =
-  "Статус(спить або не спить):" + " " + catsArray[0].sleepingStatus;
+  catsArray[0].sleepingStatus == true
+    ? "Статус(спить або не спить):" + " " + "Так"
+    : "Статус(спить або не спить):" + " " + "Ні";
+buttons[0].style.background = "red";

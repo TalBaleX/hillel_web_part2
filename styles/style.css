@@ -20,6 +20,3 @@ button {
   border: 5px solid black;
   background-color: gray;
 }
-button:hover {
-  background-color: rgb(255, 94, 0);
-}
