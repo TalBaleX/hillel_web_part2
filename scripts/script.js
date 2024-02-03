@@ -43,7 +43,7 @@ const funtik = new Cat(
   "./images/82675767-vertical-photo-of-single-small-kitten-cat-sits-on-tile-in-herbs-garden-with-thyme-in-front-and-chive.jpg"
 );
 const angela = new Cat(
-  "порода1",
+  "порода3",
   6,
   "Анжела",
   "Жіноча",
