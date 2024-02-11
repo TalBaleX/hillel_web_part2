@@ -63,18 +63,25 @@ $("button#2").on("click", function () {
 
 $("button#3").on("click", function () {
   if (_3rdTaskStatus === false) {
-    $(".obj").css("opacity", "0%");
-    $(".obj").animate(
-      {
-        width: 400,
-        height: 400,
-        opacity: 100,
-      },
-      1000,
-      function () {
-        console.log("Animation is complete");
-      }
-    );
+    $(".obj")
+      .animate(
+        {
+          opacity: 0,
+        },
+        1
+      )
+      .animate(
+        {
+          width: 400,
+          height: 400,
+          opacity: 1,
+        },
+        1000,
+        function () {
+          console.log("Animation is complete");
+        }
+      )
+      .fadeIn();
     _3rdTaskStatus = true;
   } else if (_3rdTaskStatus === true) {
     $(".obj").animate(
