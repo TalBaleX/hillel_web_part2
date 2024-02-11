@@ -1,3 +1,5 @@
+var _3rdTaskStatus = false;
+
 $("button#1").on("click", function () {
   $(".obj")
     .animate(
@@ -26,10 +28,7 @@ $("button#1").on("click", function () {
         left: 0,
         top: 0,
       },
-      1000,
-      function () {
-        console.log("Animation is complete");
-      }
+      1000
     );
 });
 
@@ -54,10 +53,7 @@ $("button#2").on("click", function () {
         left: 0,
         top: 0,
       },
-      1000,
-      function () {
-        console.log("Animation is complete");
-      }
+      1000
     );
 });
 
@@ -76,10 +72,7 @@ $("button#3").on("click", function () {
           height: 400,
           opacity: 1,
         },
-        1000,
-        function () {
-          console.log("Animation is complete");
-        }
+        1000
       )
       .fadeIn();
     _3rdTaskStatus = true;
@@ -89,12 +82,8 @@ $("button#3").on("click", function () {
         width: 100,
         height: 100,
       },
-      1000,
-      function () {
-        console.log("Animation is complete");
-      }
+      1000
     );
     _3rdTaskStatus = false;
   }
 });
-var _3rdTaskStatus = false;
