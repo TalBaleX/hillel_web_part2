@@ -1,0 +1,7 @@
+.card {
+  min-height: 600px;
+}
+.btn-primary {
+  position: absolute;
+  bottom: 15px;
+}
