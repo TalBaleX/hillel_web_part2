@@ -4,6 +4,8 @@ let clearButton = document.getElementById("clearButton");
 
 let sx = undefined;
 let ex = undefined;
+let sy = undefined;
+let ey = undefined;
 
 var c = document.getElementById("canvas");
 var rect = c.getBoundingClientRect();
@@ -17,10 +19,12 @@ img.onload = () => {
 };
 c.addEventListener("mousedown", function (e) {
   sx = e.clientX - rect.left;
+  sy = e.clientY - rect.top;
   console.log(sx);
 });
 c.addEventListener("mouseup", function (e) {
   ex = e.clientX - rect.left;
+  ey = e.clientY - rect.top;
   console.log(ex);
   createFilter();
 });
@@ -35,5 +39,5 @@ clearButton.addEventListener("click", function (event) {
 function createFilter() {
   ctx.globalAlpha = transInput.value / 100;
   ctx.fillStyle = colorInput.value;
-  ctx.fillRect(sx, 0, ex - sx, canvas.height);
+  ctx.fillRect(sx, sy, ex - sx, ey - sy);
 }
