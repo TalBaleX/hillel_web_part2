@@ -217,13 +217,14 @@ header {
   }
   .reviews {
     display: flex;
+    width: 110%;
     justify-content: space-between;
     .review {
-      width: 400px;
-      height: 230px;
+      width: 316px;
+      height: 166px;
       border: 2px solid #dddddd;
       border-radius: 10px;
-      padding: 30px 40px 30px 40px;
+      padding: 30px 40px 80px 40px;
       .review-top {
         align-items: flex-start;
         display: flex;
@@ -233,13 +234,14 @@ header {
         }
         .review-person {
           display: flex;
-          width: 45%;
+          width: 81%;
           text-align: left;
           align-items: flex-start;
-          justify-content: space-between;
+
           .review-textInfo {
             display: flex;
             flex-direction: column;
+            margin-left: 20px;
             .review-name {
               font-size: 18px;
               font-weight: 500;
@@ -260,7 +262,7 @@ header {
           }
         }
         .review-rate {
-          width: 30%;
+          width: 20%;
           text-align: end;
         }
       }
@@ -268,6 +270,57 @@ header {
         line-height: 30px;
         text-align: start;
         width: 90%;
+      }
+    }
+  }
+
+  .reviewsNav {
+    display: flex;
+    justify-content: space-between;
+    .markers {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 105px;
+      .marker {
+        width: 15px;
+        height: 15px;
+        background-color: gray;
+        border-radius: 50%;
+      }
+      .marker.active {
+        width: 45px;
+        background-color: #f53838;
+        border-radius: 15px;
+      }
+    }
+    button {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 2px #f53838 solid;
+      box-sizing: border-box;
+      background: white;
+    }
+    #rightReview {
+      background-color: #f53838;
+    }
+  }
+  .bottom-space-darker {
+    width: 100%;
+    height: 180px;
+  }
+}
+footer {
+  height: 563px;
+  background: #f8f8f8;
+  display: flex;
+  .container {
+    display: flex;
+    margin-top: 180px;
+    div:nth-child(1) {
+      .logo {
+        font-weight: 500;
       }
     }
   }

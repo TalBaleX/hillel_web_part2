@@ -1,4 +1,44 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+.col-1 {
+  width: calc(1 * 10%);
+}
+
+.col-2 {
+  width: calc(2 * 10%);
+}
+
+.col-3 {
+  width: calc(3 * 10%);
+}
+
+.col-4 {
+  width: calc(4 * 10%);
+}
+
+.col-5 {
+  width: calc(5 * 10%);
+}
+
+.col-6 {
+  width: calc(6 * 10%);
+}
+
+.col-7 {
+  width: calc(7 * 10%);
+}
+
+.col-8 {
+  width: calc(8 * 10%);
+}
+
+.col-9 {
+  width: calc(9 * 10%);
+}
+
+.col-10 {
+  width: calc(10 * 10%);
+}
+
 body {
   font-family: "Rubik";
 }
@@ -222,14 +262,15 @@ header .container div img {
 }
 .main-darker .reviews {
   display: flex;
+  width: 110%;
   justify-content: space-between;
 }
 .main-darker .reviews .review {
-  width: 400px;
-  height: 230px;
+  width: 316px;
+  height: 166px;
   border: 2px solid #dddddd;
   border-radius: 10px;
-  padding: 30px 40px 30px 40px;
+  padding: 30px 40px 80px 40px;
 }
 .main-darker .reviews .review .review-top {
   align-items: flex-start;
@@ -241,14 +282,14 @@ header .container div img {
 }
 .main-darker .reviews .review .review-top .review-person {
   display: flex;
-  width: 45%;
+  width: 81%;
   text-align: left;
   align-items: flex-start;
-  justify-content: space-between;
 }
 .main-darker .reviews .review .review-top .review-person .review-textInfo {
   display: flex;
   flex-direction: column;
+  margin-left: 20px;
 }
 .main-darker .reviews .review .review-top .review-person .review-textInfo .review-name {
   font-size: 18px;
@@ -268,11 +309,60 @@ header .container div img {
   background-image: url("/images/faces/Ellipse 175.png");
 }
 .main-darker .reviews .review .review-top .review-rate {
-  width: 30%;
+  width: 20%;
   text-align: end;
 }
 .main-darker .reviews .review .review-text {
   line-height: 30px;
   text-align: start;
   width: 90%;
+}
+.main-darker .reviewsNav {
+  display: flex;
+  justify-content: space-between;
+}
+.main-darker .reviewsNav .markers {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 105px;
+}
+.main-darker .reviewsNav .markers .marker {
+  width: 15px;
+  height: 15px;
+  background-color: gray;
+  border-radius: 50%;
+}
+.main-darker .reviewsNav .markers .marker.active {
+  width: 45px;
+  background-color: #f53838;
+  border-radius: 15px;
+}
+.main-darker .reviewsNav button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px #f53838 solid;
+  box-sizing: border-box;
+  background: white;
+}
+.main-darker .reviewsNav #rightReview {
+  background-color: #f53838;
+}
+.main-darker .bottom-space-darker {
+  width: 100%;
+  height: 180px;
+}
+
+footer {
+  height: 563px;
+  background: #f8f8f8;
+  display: flex;
+}
+footer .container {
+  display: flex;
+  margin-top: 180px;
+}
+footer .container div:nth-child(1) .logo {
+  font-weight: 500;
 }/*# sourceMappingURL=index.css.map */
