@@ -16,8 +16,8 @@ document.addEventListener("keydown", function (e) {
     let bullet = new Bullet(
       player.x + player.w / 2 - 5,
       player.y + player.h / 2,
-      10,
-      5,
+      player.angle == 0 || player.angle == 180 ? 10 : 5,
+      player.angle == 90 || player.angle == 270 ? 10 : 5,
       player.angle
     );
     bulletsArray.push(bullet);
@@ -28,7 +28,7 @@ document.addEventListener("keydown", function (e) {
 
 function updateBullets() {
   let index = 0;
-  bulletsArray.forEach((bullet) => {
+  bulletsArray.forEach((bullet, index) => {
     switch (bullet.angle) {
       case 0:
         bullet.x += bullet.speed;
@@ -45,11 +45,11 @@ function updateBullets() {
     }
     // spawn of bullets
     ctx.fillStyle = "red";
-    ctx.rect(bullet.x, bullet.y, 10, 5);
+    ctx.fillRect(bullet.x, bullet.y, bullet.w, bullet.h);
     ctx.fill();
     //deleting of not existing bullets
-    if (bullet.x > 600 && bullet.x < 0 && bullet.y < 0 && bullet.y > 600) {
-      bulletsArray.slice(index, 1);
+    if (bullet.x > 600 || bullet.x < 0 || bullet.y > 600 || bullet.y < 0) {
+      bulletsArray.splice(index, 1);
     }
   });
 }
