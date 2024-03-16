@@ -354,6 +354,23 @@ header .container div img {
   height: 180px;
 }
 
+.between-er {
+  background-color: white;
+  height: 116px;
+  position: relative;
+  padding-top: 58.5px;
+  padding-bottom: 58.5px;
+  top: 116.5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: left;
+}
+.between-er .medium-heading {
+  font-size: 35px;
+  font-weight: 500;
+}
+
 footer {
   height: 563px;
   background: #f8f8f8;
@@ -363,6 +380,30 @@ footer .container {
   display: flex;
   margin-top: 180px;
 }
+footer .container div:nth-child(1) {
+  display: block;
+}
 footer .container div:nth-child(1) .logo {
   font-weight: 500;
+}
+footer .container div:nth-child(1) .socialsBox {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+}
+footer .container div:nth-child(1) .socialsBox div {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .container div:nth-child(1) .socialsBox div + div {
+  margin-left: 30px;
+}
+footer .container div {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=index.css.map */

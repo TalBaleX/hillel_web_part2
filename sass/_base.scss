@@ -311,6 +311,22 @@ header {
     height: 180px;
   }
 }
+.between-er {
+  background-color: white;
+  height: 116px;
+  position: relative;
+  padding-top: 58.5px;
+  padding-bottom: 58.5px;
+  top: calc(233px / 2);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: left;
+  .medium-heading {
+    font-size: 35px;
+    font-weight: 500;
+  }
+}
 footer {
   height: 563px;
   background: #f8f8f8;
@@ -319,9 +335,32 @@ footer {
     display: flex;
     margin-top: 180px;
     div:nth-child(1) {
+      display: block;
       .logo {
         font-weight: 500;
       }
+      .socialsBox {
+        display: flex;
+        flex-direction: row;
+        margin-top: 30px;
+        div {
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+          background-color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        div + div {
+          margin-left: 30px;
+        }
+      }
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
     }
   }
 }
