@@ -61,7 +61,6 @@ function drawRotate(width, height, deg) {
   const offScreenCanvas = document.createElement("canvas");
   offScreenCanvas.width = width;
   offScreenCanvas.height = height;
-
   let context = offScreenCanvas.getContext("2d");
   context.save();
   context.translate(offScreenCanvas.width / 2, offScreenCanvas.height / 2);
