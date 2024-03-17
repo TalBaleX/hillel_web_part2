@@ -1,5 +1,9 @@
+@import "_adaptive.scss";
+
 body {
   font-family: "Rubik";
+  padding: 0;
+  margin: 0;
 }
 .container {
   width: 79%;
@@ -9,42 +13,57 @@ body {
 nav {
   display: flex;
   flex-direction: row;
-  .navPart {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: white;
+  z-index: 1000;
+  .container {
     display: flex;
-    width: 33%;
-    align-items: center;
-  }
-  .logo {
-    padding: 50px 0 50px 0;
-    font-weight: 500;
-    font-size: 20px;
-    span span {
-      font-weight: 700;
-      padding: 0;
+    justify-content: space-between;
+    .navPart {
+      display: flex;
+      width: 33%;
+      align-items: center;
+      a {
+        margin-right: 20px;
+      }
     }
-  }
-  .logo > span {
-    margin-left: 10px;
-  }
-  .nav {
-    justify-content: center;
-    width: 66%;
-    a {
-      display: inline-block;
-      color: rgba(79, 86, 101, 1);
-      text-decoration: none;
-    }
-    a + a {
-      margin-left: 40px;
-    }
-  }
-  .sign {
-    justify-content: space-evenly;
-    a {
-      display: inline-block;
-      text-decoration: none;
-      color: black;
+    .logo {
+      padding: 50px 0 50px 0;
       font-weight: 500;
+      font-size: 20px;
+      span span {
+        font-weight: 700;
+        padding: 0;
+      }
+    }
+    .logo > span {
+      margin-left: 10px;
+    }
+    .nav {
+      justify-content: center;
+      width: 66%;
+      @include laptopM {
+        display: none;
+      }
+      a {
+        display: inline-block;
+        color: rgba(79, 86, 101, 1);
+        text-decoration: none;
+      }
+      a + a {
+        margin-left: 40px;
+      }
+    }
+    .sign {
+      justify-content: space-evenly;
+      a {
+        display: inline-block;
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+      }
     }
   }
 }
@@ -82,6 +101,7 @@ p span {
 
 header {
   display: flex;
+  margin-top: 200px;
   div {
     width: 50%;
     display: flex;
@@ -148,6 +168,9 @@ header {
   display: flex;
   margin-top: 100px;
   padding-bottom: 130px;
+  @include laptopSM {
+    flex-direction: column;
+  }
   div {
     width: 50%;
     img {
@@ -170,6 +193,9 @@ header {
         vertical-align: -20%;
       }
     }
+    @include laptopSM {
+      margin: auto;
+    }
   }
 }
 .main-darker {
@@ -178,7 +204,12 @@ header {
   .cards {
     display: flex;
     justify-content: space-between;
-
+    flex-direction: row;
+    max-width: 1440px;
+    margin: auto;
+    @include laptopSM {
+      flex-direction: column;
+    }
     .card {
       background-color: white;
       min-width: 330px;
@@ -186,6 +217,12 @@ header {
       padding: 80px 0px 90px 0px;
       border-radius: 10px;
       border: #dddddd 2px solid;
+      @include laptopSM {
+        max-width: 334px;
+        margin: auto;
+        flex-direction: column;
+      }
+
       .card-title {
         font-size: 18px;
         font-weight: 500;
@@ -226,17 +263,35 @@ header {
     .card.active {
       border: 2px #f53838 solid;
     }
+    .card + .card {
+      margin-left: 20px;
+      @include laptopSM {
+        margin: auto;
+        margin-top: 100px;
+      }
+    }
   }
   .reviews {
     display: flex;
     width: 110%;
+    max-width: 1440px;
+    margin: auto;
     justify-content: space-between;
+    @include tabletL {
+      flex-direction: column;
+    }
     .review {
       width: 316px;
       height: 166px;
       border: 2px solid #dddddd;
       border-radius: 10px;
       padding: 30px 40px 80px 40px;
+      @include laptopM {
+        height: 300px;
+      }
+      @include tabletL {
+        margin: auto;
+      }
       .review-top {
         align-items: flex-start;
         display: flex;
@@ -287,11 +342,18 @@ header {
     .review.active {
       border: 2px solid #f53838;
     }
+    .review + .review {
+      @include tabletL {
+        margin-top: 30px;
+      }
+    }
   }
 
   .reviewsNav {
     display: flex;
     justify-content: space-between;
+    max-width: 1440px;
+    margin: auto;
     .markers {
       display: flex;
       justify-content: space-around;
@@ -302,6 +364,9 @@ header {
         height: 15px;
         background-color: gray;
         border-radius: 50%;
+        @include tabletL {
+          display: none;
+        }
       }
       .marker.active {
         width: 45px;
@@ -316,6 +381,9 @@ header {
       border: 2px #f53838 solid;
       box-sizing: border-box;
       background: white;
+      @include tabletL {
+        display: none;
+      }
     }
     #rightReview {
       background-color: #f53838;
@@ -341,6 +409,17 @@ header {
   .medium-heading {
     font-size: 35px;
     font-weight: 500;
+  }
+  button {
+    @include tabletL {
+      margin-top: 50px;
+    }
+  }
+  @include tabletL {
+    flex-direction: column;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    text-align: center;
   }
 }
 footer {

@@ -8,8 +8,8 @@ let twoTouches = [];
 
 highlight();
 
-sliderBLOCK.addEventListener("touchstart", touchstart);
-sliderBLOCK.addEventListener("touchend", touchend);
+sliderBLOCK.addEventListener("mousedown", touchstart);
+sliderBLOCK.addEventListener("mouseup", touchend);
 document.getElementById("leftReview").addEventListener("click", goLeft);
 document.getElementById("rightReview").addEventListener("click", goRight);
 

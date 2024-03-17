@@ -41,6 +41,8 @@
 
 body {
   font-family: "Rubik";
+  padding: 0;
+  margin: 0;
 }
 
 .container {
@@ -51,40 +53,57 @@ body {
 nav {
   display: flex;
   flex-direction: row;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: white;
+  z-index: 1000;
 }
-nav .navPart {
+nav .container {
+  display: flex;
+  justify-content: space-between;
+}
+nav .container .navPart {
   display: flex;
   width: 33%;
   align-items: center;
 }
-nav .logo {
+nav .container .navPart a {
+  margin-right: 20px;
+}
+nav .container .logo {
   padding: 50px 0 50px 0;
   font-weight: 500;
   font-size: 20px;
 }
-nav .logo span span {
+nav .container .logo span span {
   font-weight: 700;
   padding: 0;
 }
-nav .logo > span {
+nav .container .logo > span {
   margin-left: 10px;
 }
-nav .nav {
+nav .container .nav {
   justify-content: center;
   width: 66%;
 }
-nav .nav a {
+@media (max-width: 1232px) {
+  nav .container .nav {
+    display: none;
+  }
+}
+nav .container .nav a {
   display: inline-block;
   color: rgb(79, 86, 101);
   text-decoration: none;
 }
-nav .nav a + a {
+nav .container .nav a + a {
   margin-left: 40px;
 }
-nav .sign {
+nav .container .sign {
   justify-content: space-evenly;
 }
-nav .sign a {
+nav .container .sign a {
   display: inline-block;
   text-decoration: none;
   color: black;
@@ -127,6 +146,7 @@ p span {
 
 header {
   display: flex;
+  margin-top: 200px;
 }
 header div {
   width: 50%;
@@ -193,6 +213,11 @@ header .container div img {
   margin-top: 100px;
   padding-bottom: 130px;
 }
+@media (max-width: 1128px) {
+  .features {
+    flex-direction: column;
+  }
+}
 .features div {
   width: 50%;
 }
@@ -216,6 +241,11 @@ header .container div img {
   margin-right: 10px;
   vertical-align: -20%;
 }
+@media (max-width: 1128px) {
+  .features div {
+    margin: auto;
+  }
+}
 
 .main-darker {
   background: rgb(251, 251, 251);
@@ -224,6 +254,14 @@ header .container div img {
 .main-darker .cards {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
+  max-width: 1440px;
+  margin: auto;
+}
+@media (max-width: 1128px) {
+  .main-darker .cards {
+    flex-direction: column;
+  }
 }
 .main-darker .cards .card {
   background-color: white;
@@ -232,6 +270,13 @@ header .container div img {
   padding: 80px 0px 90px 0px;
   border-radius: 10px;
   border: #dddddd 2px solid;
+}
+@media (max-width: 1128px) {
+  .main-darker .cards .card {
+    max-width: 334px;
+    margin: auto;
+    flex-direction: column;
+  }
 }
 .main-darker .cards .card .card-title {
   font-size: 18px;
@@ -271,10 +316,26 @@ header .container div img {
 .main-darker .cards .card.active {
   border: 2px #f53838 solid;
 }
+.main-darker .cards .card + .card {
+  margin-left: 20px;
+}
+@media (max-width: 1128px) {
+  .main-darker .cards .card + .card {
+    margin: auto;
+    margin-top: 100px;
+  }
+}
 .main-darker .reviews {
   display: flex;
   width: 110%;
+  max-width: 1440px;
+  margin: auto;
   justify-content: space-between;
+}
+@media (max-width: 896px) {
+  .main-darker .reviews {
+    flex-direction: column;
+  }
 }
 .main-darker .reviews .review {
   width: 316px;
@@ -282,6 +343,16 @@ header .container div img {
   border: 2px solid #dddddd;
   border-radius: 10px;
   padding: 30px 40px 80px 40px;
+}
+@media (max-width: 1232px) {
+  .main-darker .reviews .review {
+    height: 300px;
+  }
+}
+@media (max-width: 896px) {
+  .main-darker .reviews .review {
+    margin: auto;
+  }
 }
 .main-darker .reviews .review .review-top {
   align-items: flex-start;
@@ -331,9 +402,16 @@ header .container div img {
 .main-darker .reviews .review.active {
   border: 2px solid #f53838;
 }
+@media (max-width: 896px) {
+  .main-darker .reviews .review + .review {
+    margin-top: 30px;
+  }
+}
 .main-darker .reviewsNav {
   display: flex;
   justify-content: space-between;
+  max-width: 1440px;
+  margin: auto;
 }
 .main-darker .reviewsNav .markers {
   display: flex;
@@ -347,6 +425,11 @@ header .container div img {
   background-color: gray;
   border-radius: 50%;
 }
+@media (max-width: 896px) {
+  .main-darker .reviewsNav .markers .marker {
+    display: none;
+  }
+}
 .main-darker .reviewsNav .markers .marker.active {
   width: 45px;
   background-color: #f53838;
@@ -359,6 +442,11 @@ header .container div img {
   border: 2px #f53838 solid;
   box-sizing: border-box;
   background: white;
+}
+@media (max-width: 896px) {
+  .main-darker .reviewsNav button {
+    display: none;
+  }
 }
 .main-darker .reviewsNav #rightReview {
   background-color: #f53838;
@@ -384,6 +472,19 @@ header .container div img {
 .between-er .medium-heading {
   font-size: 35px;
   font-weight: 500;
+}
+@media (max-width: 896px) {
+  .between-er button {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 896px) {
+  .between-er {
+    flex-direction: column;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    text-align: center;
+  }
 }
 
 footer {
