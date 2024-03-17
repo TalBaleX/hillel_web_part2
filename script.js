@@ -1,12 +1,31 @@
+let cards = Array.from(document.getElementsByClassName("card"));
 let reviews = Array.from(document.getElementsByClassName("review"));
 let markers = Array.from(document.getElementsByClassName("marker"));
 let currentSlide = 0;
 let lastSlide = 2;
 
-highlightMarkers();
+highlight();
 
 document.getElementById("leftReview").addEventListener("click", goLeft);
 document.getElementById("rightReview").addEventListener("click", goRight);
+
+cards.forEach((card) => {
+  card.addEventListener("click", function (e) {
+    if (e.target.classList.contains("button")) {
+      let allButtons = Array.from(document.getElementsByClassName("button"));
+      let allCards = Array.from(document.getElementsByClassName("card"));
+      console.log(allButtons);
+      allButtons.forEach((button) => {
+        button.classList.remove("active");
+      });
+      e.target.classList.add("active");
+      allCards.forEach((cards) => {
+        cards.classList.remove("active");
+      });
+      e.currentTarget.classList.add("active");
+    }
+  });
+});
 
 markers.forEach((THISmarker) => {
   THISmarker.addEventListener("click", function () {
@@ -33,7 +52,7 @@ function goLeft(event) {
     lastSlide = 1;
   }
 
-  highlightMarkers();
+  highlight();
 }
 
 function goRight(event) {
@@ -51,7 +70,7 @@ function goRight(event) {
   } else {
     lastSlide = 0;
   }
-  highlightMarkers();
+  highlight();
 }
 
 function setAllReviews() {
@@ -60,7 +79,7 @@ function setAllReviews() {
   }
 }
 
-function highlightMarkers() {
+function highlight() {
   for (let i = 0; i < markers.length; i++) {
     if (i == currentSlide) {
       markers[i].classList.add("active");
@@ -71,4 +90,12 @@ function highlightMarkers() {
       });
     }
   }
+  reviews.forEach((review, index) => {
+    if (index == 0) {
+      review.classList.add("active");
+    }
+    if (index > 0) {
+      review.classList.remove("active");
+    }
+  });
 }

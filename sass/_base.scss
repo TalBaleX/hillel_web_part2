@@ -77,6 +77,7 @@ p span {
   border: none;
   border-radius: 10px;
   font-weight: 700;
+  box-shadow: 0px 40px 50px -15px rgba(245, 56, 56, 0.45);
 }
 
 header {
@@ -100,8 +101,11 @@ header {
 
 .advantages {
   display: flex;
+  margin-top: 50px;
   height: 125px;
   align-items: center;
+  box-shadow: 0px 50px 50px -13px rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
   .advantage {
     width: 33%;
     display: flex;
@@ -118,6 +122,11 @@ header {
         font-weight: bold;
       }
     }
+  }
+
+  .advantage.middle {
+    border-left: 2px #eeeff2 solid;
+    border-right: 2px #eeeff2 solid;
   }
   .circle {
     display: flex;
@@ -137,6 +146,8 @@ header {
 
 .features {
   display: flex;
+  margin-top: 100px;
+  padding-bottom: 130px;
   div {
     width: 50%;
     img {
@@ -172,7 +183,7 @@ header {
       background-color: white;
       min-width: 330px;
       height: 630px;
-      padding: 80px 0px 50px 0px;
+      padding: 80px 0px 90px 0px;
       border-radius: 10px;
       border: #dddddd 2px solid;
       .card-title {
@@ -206,12 +217,13 @@ header {
         color: #f53838;
         background-color: white;
       }
-      .card-premium.button {
+      .button.active {
         color: white;
         background: #f53838;
+        box-shadow: 0px 40px 50px -15px rgba(245, 56, 56, 0.45);
       }
     }
-    .premium {
+    .card.active {
       border: 2px #f53838 solid;
     }
   }
@@ -272,6 +284,9 @@ header {
         width: 90%;
       }
     }
+    .review.active {
+      border: 2px solid #f53838;
+    }
   }
 
   .reviewsNav {
@@ -322,6 +337,7 @@ header {
   justify-content: space-around;
   align-items: center;
   text-align: left;
+  border-radius: 10px;
   .medium-heading {
     font-size: 35px;
     font-weight: 500;
@@ -351,6 +367,8 @@ footer {
           display: flex;
           align-items: center;
           justify-content: center;
+          -webkit-box-shadow: 0px 35px 50px 3px rgba(0, 0, 0, 0.28);
+          box-shadow: 0px 10px 40px 1px rgba(0, 0, 0, 0.14);
         }
         div + div {
           margin-left: 30px;

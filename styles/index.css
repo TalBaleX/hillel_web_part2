@@ -122,6 +122,7 @@ p span {
   border: none;
   border-radius: 10px;
   font-weight: 700;
+  box-shadow: 0px 40px 50px -15px rgba(245, 56, 56, 0.45);
 }
 
 header {
@@ -145,8 +146,11 @@ header .container div img {
 
 .advantages {
   display: flex;
+  margin-top: 50px;
   height: 125px;
   align-items: center;
+  box-shadow: 0px 50px 50px -13px rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
 }
 .advantages .advantage {
   width: 33%;
@@ -165,6 +169,10 @@ header .container div img {
   font-size: 25px;
   font-weight: bold;
 }
+.advantages .advantage.middle {
+  border-left: 2px #eeeff2 solid;
+  border-right: 2px #eeeff2 solid;
+}
 .advantages .circle {
   display: flex;
   justify-content: center;
@@ -182,6 +190,8 @@ header .container div img {
 
 .features {
   display: flex;
+  margin-top: 100px;
+  padding-bottom: 130px;
 }
 .features div {
   width: 50%;
@@ -219,7 +229,7 @@ header .container div img {
   background-color: white;
   min-width: 330px;
   height: 630px;
-  padding: 80px 0px 50px 0px;
+  padding: 80px 0px 90px 0px;
   border-radius: 10px;
   border: #dddddd 2px solid;
 }
@@ -253,11 +263,12 @@ header .container div img {
   color: #f53838;
   background-color: white;
 }
-.main-darker .cards .card .card-premium.button {
+.main-darker .cards .card .button.active {
   color: white;
   background: #f53838;
+  box-shadow: 0px 40px 50px -15px rgba(245, 56, 56, 0.45);
 }
-.main-darker .cards .premium {
+.main-darker .cards .card.active {
   border: 2px #f53838 solid;
 }
 .main-darker .reviews {
@@ -317,6 +328,9 @@ header .container div img {
   text-align: start;
   width: 90%;
 }
+.main-darker .reviews .review.active {
+  border: 2px solid #f53838;
+}
 .main-darker .reviewsNav {
   display: flex;
   justify-content: space-between;
@@ -365,6 +379,7 @@ header .container div img {
   justify-content: space-around;
   align-items: center;
   text-align: left;
+  border-radius: 10px;
 }
 .between-er .medium-heading {
   font-size: 35px;
@@ -399,6 +414,7 @@ footer .container div:nth-child(1) .socialsBox div {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0px 10px 40px 1px rgba(0, 0, 0, 0.14);
 }
 footer .container div:nth-child(1) .socialsBox div + div {
   margin-left: 30px;
