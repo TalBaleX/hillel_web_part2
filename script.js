@@ -1,11 +1,15 @@
 let cards = Array.from(document.getElementsByClassName("card"));
+let sliderBLOCK = document.getElementsByClassName("reviews")[0];
 let reviews = Array.from(document.getElementsByClassName("review"));
 let markers = Array.from(document.getElementsByClassName("marker"));
 let currentSlide = 0;
 let lastSlide = 2;
+let twoTouches = [];
 
 highlight();
 
+sliderBLOCK.addEventListener("touchstart", touchstart);
+sliderBLOCK.addEventListener("touchend", touchend);
 document.getElementById("leftReview").addEventListener("click", goLeft);
 document.getElementById("rightReview").addEventListener("click", goRight);
 
@@ -98,4 +102,21 @@ function highlight() {
       review.classList.remove("active");
     }
   });
+}
+
+function touchstart(event) {
+  let rect = sliderBLOCK.getBoundingClientRect();
+  twoTouches.push(event.clientX - rect.left);
+}
+function touchend(event) {
+  let rect = sliderBLOCK.getBoundingClientRect();
+  twoTouches.push(event.clientX - rect.left);
+
+  if (twoTouches[0] > twoTouches[1]) {
+    goRight(event);
+  } else if (twoTouches[0] < twoTouches[1]) {
+    goLeft(event);
+  }
+
+  twoTouches = [];
 }
