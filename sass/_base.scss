@@ -450,6 +450,9 @@ footer {
   height: 563px;
   background: #f8f8f8;
   display: flex;
+  @include tablet {
+    flex-direction: column;
+  }
   .container {
     display: flex;
     margin-top: 180px;
