@@ -156,12 +156,32 @@ header div {
 header .container {
   flex-direction: row;
 }
+@media (max-width: 896px) {
+  header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 header .container div {
   width: 50%;
+  justify-content: center;
+}
+@media (max-width: 896px) {
+  header .container div {
+    width: 100%;
+    margin: auto;
+    align-items: center;
+  }
 }
 header .container div img {
   width: 110%;
   height: 100%;
+}
+@media (max-width: 1232px) {
+  header .container div img {
+    height: 70%;
+    margin-top: 100px;
+  }
 }
 
 .advantages {
@@ -224,6 +244,13 @@ header .container div img {
 .features div img {
   max-width: 500px;
 }
+@media (max-width: 1128px) {
+  .features div img {
+    max-width: 70%;
+    margin: auto;
+    text-align: center;
+  }
+}
 .features div .medium-heading {
   font-size: 35px;
   font-weight: 500;
@@ -245,6 +272,10 @@ header .container div img {
   .features div {
     margin: auto;
   }
+}
+.features div:has(img) {
+  display: flex;
+  justify-content: center;
 }
 
 .main-darker {
