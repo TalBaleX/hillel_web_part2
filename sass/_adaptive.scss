@@ -29,6 +29,11 @@
     @content;
   }
 }
+@mixin tabletS {
+  @media (max-width: 596px) {
+    @content;
+  }
+}
 @mixin mobile {
   @media (max-width: 425px) {
     @content;

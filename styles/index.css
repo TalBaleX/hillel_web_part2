@@ -205,9 +205,19 @@ header .container div img {
   font-size: 20px;
   margin-left: 10%;
 }
+@media (max-width: 596px) {
+  .advantages .advantage .advantage-text {
+    font-size: 16px;
+  }
+}
 .advantages .advantage .advantage-text .advantage-bold {
   font-size: 25px;
   font-weight: bold;
+}
+@media (max-width: 596px) {
+  .advantages .advantage .advantage-text .advantage-bold {
+    font-size: 20px;
+  }
 }
 .advantages .advantage.middle {
   border-left: 2px #eeeff2 solid;
@@ -240,6 +250,11 @@ header .container div img {
 }
 .features div {
   width: 50%;
+}
+@media (max-width: 896px) {
+  .features div {
+    width: 70%;
+  }
 }
 .features div img {
   max-width: 500px;
@@ -528,10 +543,14 @@ footer .container {
   margin-top: 180px;
 }
 footer .container div:nth-child(1) {
-  display: block;
+  display: flex;
 }
 footer .container div:nth-child(1) .logo {
   font-weight: 500;
+}
+footer .container div:nth-child(1) .img-logo {
+  width: 35px;
+  height: 35px;
 }
 footer .container div:nth-child(1) .socialsBox {
   display: flex;

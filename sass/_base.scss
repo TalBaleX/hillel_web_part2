@@ -151,10 +151,16 @@ header {
     }
     .advantage-text {
       font-size: 20px;
+      @include tabletS {
+        font-size: 16px;
+      }
       margin-left: 10%;
       .advantage-bold {
         font-size: 25px;
         font-weight: bold;
+        @include tabletS {
+          font-size: 20px;
+        }
       }
     }
   }
@@ -188,6 +194,9 @@ header {
   }
   div {
     width: 50%;
+    @include tabletL {
+      width: 70%;
+    }
     img {
       max-width: 500px;
       @include laptopSM {
@@ -450,16 +459,17 @@ footer {
   height: 563px;
   background: #f8f8f8;
   display: flex;
-  @include tablet {
-    flex-direction: column;
-  }
   .container {
     display: flex;
     margin-top: 180px;
     div:nth-child(1) {
-      display: block;
+      display: flex;
       .logo {
         font-weight: 500;
+      }
+      .img-logo {
+        width: 35px;
+        height: 35px;
       }
       .socialsBox {
         display: flex;
