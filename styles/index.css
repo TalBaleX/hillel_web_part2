@@ -103,11 +103,43 @@ nav .container .nav a + a {
 nav .container .sign {
   justify-content: space-evenly;
 }
+@media (max-width: 1232px) {
+  nav .container .sign {
+    display: none;
+  }
+}
 nav .container .sign a {
   display: inline-block;
   text-decoration: none;
   color: black;
   font-weight: 500;
+}
+nav .container .burger {
+  display: none;
+}
+@media (max-width: 1232px) {
+  nav .container .burger {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.collapsingMenu {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  top: 137px;
+  background-color: white;
+  border-top: #e0e0e0 1px solid;
+  transition: 2s linear;
+}
+.collapsingMenu div + div {
+  margin-top: 10px;
 }
 
 .navSignButton {
@@ -378,11 +410,6 @@ header .container div img {
   margin: auto;
   justify-content: space-between;
 }
-@media (max-width: 896px) {
-  .main-darker .reviews {
-    flex-direction: column;
-  }
-}
 .main-darker .reviews .review {
   width: 316px;
   height: 166px;
@@ -397,7 +424,7 @@ header .container div img {
 }
 @media (max-width: 896px) {
   .main-darker .reviews .review {
-    margin: auto;
+    height: 415px;
   }
 }
 .main-darker .reviews .review .review-top {
@@ -448,11 +475,6 @@ header .container div img {
 .main-darker .reviews .review.active {
   border: 2px solid #f53838;
 }
-@media (max-width: 896px) {
-  .main-darker .reviews .review + .review {
-    margin-top: 30px;
-  }
-}
 .main-darker .reviewsNav {
   display: flex;
   justify-content: space-between;
@@ -488,14 +510,24 @@ header .container div img {
   border: 2px #f53838 solid;
   box-sizing: border-box;
   background: white;
+  transition: 0.2s linear;
 }
 @media (max-width: 896px) {
   .main-darker .reviewsNav button {
     display: none;
   }
 }
-.main-darker .reviewsNav #rightReview {
+.main-darker .reviewsNav #leftReview:hover {
   background-color: #f53838;
+}
+.main-darker .reviewsNav #leftReview:hover img {
+  content: url("/images/Icon/Button/Vectorleft_white.svg");
+}
+.main-darker .reviewsNav #rightReview:hover {
+  background-color: #f53838;
+}
+.main-darker .reviewsNav #rightReview:hover img {
+  content: url("/images/Icon/Button/white.svg");
 }
 .main-darker .bottom-space-darker {
   width: 100%;

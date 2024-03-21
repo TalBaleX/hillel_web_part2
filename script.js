@@ -2,14 +2,17 @@ let cards = Array.from(document.getElementsByClassName("card"));
 let sliderBLOCK = document.getElementsByClassName("reviews")[0];
 let reviews = Array.from(document.getElementsByClassName("review"));
 let markers = Array.from(document.getElementsByClassName("marker"));
+let burgerMenu = document.getElementsByClassName("menuButton")[0];
 let currentSlide = 0;
 let lastSlide = 2;
-let twoTouches = [];
+let x1, x2;
+let burgerSTATUS = false;
 
 highlight();
 
-sliderBLOCK.addEventListener("mousedown", touchstart);
-sliderBLOCK.addEventListener("mouseup", touchend);
+sliderBLOCK.addEventListener("touchstart", touchstart);
+sliderBLOCK.addEventListener("touchmove", touchmove);
+sliderBLOCK.addEventListener("touchend", touchend);
 document.getElementById("leftReview").addEventListener("click", goLeft);
 document.getElementById("rightReview").addEventListener("click", goRight);
 
@@ -38,6 +41,16 @@ markers.forEach((THISmarker) => {
       goLeft(event);
     }
   });
+});
+
+burgerMenu.addEventListener("click", function () {
+  if (burgerSTATUS == false) {
+    document.getElementsByClassName("collapsingMenu")[0].style.display = "flex";
+    burgerSTATUS = true;
+  } else if (burgerSTATUS == true) {
+    document.getElementsByClassName("collapsingMenu")[0].style.display = "none";
+    burgerSTATUS = false;
+  }
 });
 
 function goLeft(event) {
@@ -98,25 +111,28 @@ function highlight() {
     if (index == 0) {
       review.classList.add("active");
     }
+    review.style.marginLeft = 0;
     if (index > 0) {
       review.classList.remove("active");
+      review.style.marginLeft = 20 + "px";
     }
   });
 }
 
 function touchstart(event) {
+  event.preventDefault();
   let rect = sliderBLOCK.getBoundingClientRect();
-  twoTouches.push(event.clientX - rect.left);
+  x1 = event.touches[0].clientX - rect.left;
+}
+function touchmove(event) {
+  event.preventDefault();
+  let rect = sliderBLOCK.getBoundingClientRect();
+  x2 = event.touches[0].clientX - rect.left;
 }
 function touchend(event) {
-  let rect = sliderBLOCK.getBoundingClientRect();
-  twoTouches.push(event.clientX - rect.left);
-
-  if (twoTouches[0] > twoTouches[1]) {
+  if (x1 > x2) {
     goRight(event);
-  } else if (twoTouches[0] < twoTouches[1]) {
+  } else if (x1 < x2) {
     goLeft(event);
   }
-
-  twoTouches = [];
 }
